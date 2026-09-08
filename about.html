@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About LeadBridge | B2B Outbound Lead Engineers</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Meet Oluyombo Olusegun and the mechanics behind LeadBridge—engineering predictable B2B sales pipelines and market insights for African enterprises.">
+<link rel="canonical" href="https://leadbridge.com.ng">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leadbridge.com.ng">
+<meta property="og:title" content="About LeadBridge | B2B Outbound Lead Engineers">
+<meta property="og:description" content="Discover how we scale enterprise pipelines without wasting ad budgets.">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured Data Matrix -->
+<script type="application/ld-json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://leadbridge.com.ng",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Oluyombo Olusegun",
+      "jobTitle": "Founder & B2B Lead Specialist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "LeadBridge"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ibadan",
+        "addressCountry": "NG"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leadbridge.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://leadbridge.com.ng" }
+    ]
+  }
+]
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <span class="logo">LeadBridge</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Inside Look / Biography Layout -->
+<section class="about-hero-section">
+  <div class="container text-center">
+    <h1>Our Mission & Philosophy</h1>
+    <p style="max-width: 700px; margin: 0 auto 40px auto;">We believe outbound sales shouldn't be a guessing game. LeadBridge builds predictable data pipelines that connect scaling B2B enterprises directly to validated market executives.</p>
+  </div>
+</section>
+
+<section id="founder-deep-dive" class="scroll-animate">
+  <div class="container founder-content">
+    <div class="founder-image">
+      <img src="oluyombo.jpg" alt="Oluyombo Olusegun">
+    </div>
+    <div class="founder-text">
+      <h2>Driven by Data, Not Guesswork</h2>
+      <p><strong>Oluyombo Olusegun | Founder, LeadBridge</strong></p>
+      <p>Operating out of Ibadan, Nigeria, Oluyombo engineered LeadBridge out of a common frustration: the extreme fatigue and low conversion rates associated with traditional, untargeted sales outreach across Africa.</p>
+      <p>By blending deep quantitative market research with modern multichain outbound workflow tech, his systems bypass gatekeepers to drop high-ticket conversion opportunities straight into sales calendars.</p>
+      <a href="index.html#contact" class="btn" style="margin-top:15px;">Work With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Values / Framework Cards -->
+<section id="our-values" class="scroll-animate">
+  <div class="container">
+    <h2 class="section-title text-center">The LeadBridge Core Principles</h2>
+    <div class="grid" style="margin-top: 40px;">
+      <div class="card">
+        <h3>🎯 Extreme Verification</h3>
+        <p>We strictly validate decision-maker channels before executing campaigns. No dead emails, no bounces.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Process Automation</h3>
+        <p>We design custom sales funnels that work quietly behind the scenes, leaving your team free to focus entirely on closing deals.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Complete Transparency</h3>
+        <p>Every single outreach data point, script iteration variant, and open metric is tracked and shared weekly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 LeadBridge</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <p>WhatsApp: +234 812 206 7370 | Email: oluyomboolusegun97@gmail.com</p>
+  </div>
+</footer>
+
+<a href="https://wa.me" class="whatsapp-float" target="_blank">💬</a>
+<button onclick="scrollToTop()" id="backToTop">↑</button>
+
+<script>
+function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+window.onscroll = function() {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) { btn.style.display = "block"; } 
+  else { btn.style.display = "none"; }
+};
+
+function revealOnScroll() {
+  const elements = document.querySelectorAll('.scroll-animate');
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) { el.classList.add('visible'); }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>
