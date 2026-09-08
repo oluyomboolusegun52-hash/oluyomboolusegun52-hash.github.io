@@ -1,0 +1,117 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Growth Insights Blog | LeadBridge</title>
+<meta name="description" content="Read actionable playbooks on outbound pipeline automation, prospect list scraping, and enterprise closing patterns tailored for African business landscapes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <span class="logo">LeadBridge</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="blog-dashboard-hero">
+  <div class="container text-center">
+    <h1>LeadBridge Insights</h1>
+    <p>Outbound growth mechanics and market intelligence, built for modern firms.</p>
+    
+    <!-- Blog Search Hub Component -->
+    <div class="search-wrap">
+      <input type="text" id="blogSearch" placeholder="Search insights by topic or keyword..." onkeyup="filterBlogContent()">
+    </div>
+
+    <!-- Category Pill Links -->
+    <div class="category-pills">
+      <button class="pill active" onclick="filterCategory('all')">All Articles</button>
+      <button class="pill" onclick="filterCategory('lead-gen')">Lead Generation</button>
+      <button class="pill" onclick="filterCategory('market-research')">Market Research</button>
+      <button class="pill" onclick="filterCategory('sales-strategy')">Sales Strategy</button>
+    </div>
+  </div>
+</section>
+
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="grid" id="blogContainer">
+      
+      <!-- Article Card 1 -->
+      <article class="card blog-post-card" data-category="lead-gen">
+        <span class="post-tag">Lead Generation</span>
+        <h3><a href="blog-scaling-outbound-nigeria.html">Scaling Outbound B2B Campaigns in Nigeria</a></h3>
+        <p>Discover the precise frameworks required to bypass gatekeepers and reach operational executives effectively across top corporate industries.</p>
+        <div class="post-meta">Published: 2026-09-08 | 5 min read</div>
+      </article>
+
+      <!-- Article Card 2 -->
+      <article class="card blog-post-card" data-category="market-research">
+        <span class="post-tag">Market Research</span>
+        <h3><a href="#">Deep Competitive Intelligence Methods</a></h3>
+        <p>A structured workflow overview mapping out market indicators across Real Estate and SaaS fields prior to setting up direct cold message systems.</p>
+        <div class="post-meta">Published: 2026-09-01 | 7 min read</div>
+      </article>
+
+      <!-- Article Card 3 -->
+      <article class="card blog-post-card" data-category="sales-strategy">
+        <span class="post-tag">Sales Strategy</span>
+        <h3><a href="#">Eliminating No-Show Calendar Bookings</a></h3>
+        <p>Stop wasting precious executive hours. Learn our exact automatic reminders configuration to drive strategies conversion rates upward.</p>
+        <div class="post-meta">Published: 2026-08-24 | 4 min read</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 LeadBridge | <a href="index.html">Return Home</a></p>
+  </div>
+</footer>
+
+<script>
+function filterBlogContent() {
+  const query = document.getElementById('blogSearch').value.toLowerCase();
+  const articles = document.querySelectorAll('.blog-post-card');
+  
+  articles.forEach(article => {
+    const title = article.querySelector('h3').innerText.toLowerCase();
+    const excerpt = article.querySelector('p').innerText.toLowerCase();
+    if(title.includes(query) || excerpt.includes(query)) {
+      article.style.display = "block";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+
+function filterCategory(cat) {
+  // Update Active Pill States
+  const pills = document.querySelectorAll('.pill');
+  pills.forEach(pill => pill.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const articles = document.querySelectorAll('.blog-post-card');
+  articles.forEach(article => {
+    if(cat === 'all' || article.getAttribute('data-category') === cat) {
+      article.style.display = "block";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+</script>
+</body>
+</html>
