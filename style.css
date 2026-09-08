@@ -1,0 +1,176 @@
+/* ==========================================================================
+   LeadBridge Pro Additions (Blog, Testimonial, and Layout Enhancements)
+   ========================================================================== */
+
+/* Header Layout Balance */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Featured Client Grid Elements */
+.clients-section {
+    background-color: #0b0f19;
+    padding: 40px 0;
+    text-align: center;
+}
+.client-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.logo-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Testimonial Presentation Layout */
+.testimonials-section {
+    background-color: #0f172a;
+}
+.testimonial-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+}
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-main) !important;
+    margin-bottom: 15px;
+}
+.client-info {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.client-info strong {
+    display: block;
+    color: var(--text-main);
+}
+
+/* Newsletter Capture Container Styles */
+.newsletter-section {
+    background-color: #1e293b;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 50px 30px;
+    border: 1px solid #334155;
+}
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    max-width: 500px;
+    margin: 25px auto 10px auto;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    background-color: var(--bg-color);
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 6px;
+}
+.status-msg {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Blog Component Search Styles */
+.blog-dashboard-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0b0f19;
+}
+.search-wrap {
+    margin: 25px auto;
+    max-width: 500px;
+}
+.search-wrap input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #334155;
+    background-color: var(--card-bg);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+.category-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.pill {
+    background-color: var(--card-bg);
+    border: 1px solid #334155;
+    color: var(--text-muted);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pill:hover, .pill.active {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Single Blog Page View & Social Boxes */
+.single-post-wrap {
+    max-width: 800px !important;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+.article-body h2 {
+    margin: 30px 0 15px 0;
+    color: white;
+}
+.article-body p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+.share-box {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 50px;
+    border: 1px solid #334155;
+}
+.share-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.share-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+.share-btn.li { background-color: #0077b5; }
+.share-btn.tw { background-color: #1da1f2; }
+.share-btn.wa { background-color: #25d366; }
+
+/* Scroll Animating Framework Hooks */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
