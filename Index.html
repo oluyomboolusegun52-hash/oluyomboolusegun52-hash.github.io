@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeadBridge | Oluyombo Olusegun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="logo">LeadBridge</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>B2B Leads for African Businesses</h1>
+  <p>Get 10–30 qualified client calls every month. No ad waste. Just results.</p>
+  <a href="https://wa.me/2348122067370?text=Hi%20LeadBridge%20I%20want%20a%20free%20strategy%20call" class="btn">Get Free Strategy Call</a>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Done‑for‑you lead generation</p>
+    <div class="grid">
+      <div class="card"><h3>📊 Market Research</h3><p>We analyze industries and competitors to give you actionable insights.</p></div>
+      <div class="card"><h3>🎯 Decision‑Maker Research</h3><p>We identify the right executives so your outreach lands with impact.</p></div>
+      <div class="card"><h3>📈 Lead Generation</h3><p>We deliver qualified prospects ready to book calls with your team.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title">Simple Pricing</h2>
+    <p class="section-subtitle">No setup fees. Cancel anytime.</p>
+    <div class="pricing">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">₦750,000<span>/month</span></div>
+        <ul><li>✓ 10 Qualified Calls/Month</li><li>✓ LinkedIn Outreach</li><li>✓ Email Campaigns</li><li>✓ Weekly Reports</li></ul>
+        <a href="https://calendly.com/oluyomboolusegun52/30min" target="_blank" class="btn">Book Free Strategy Call</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Growth</h3>
+        <div class="price">₦1,500,000<span>/month</span></div>
+        <ul><li>✓ 25 Qualified Calls/Month</li><li>✓ LinkedIn + Email + WhatsApp</li><li>✓ Dedicated SDR</li><li>✓ CRM Setup</li></ul>
+        <a href="https://calendly.com/oluyomboolusegun52/30min" target="_blank" class="btn">Book Free Strategy Call</a>
+      </div>
+      <div class="price-card">
+        <h3>Scale</h3>
+        <div class="price">₦3,000,000<span>/month</span></div>
+        <ul><li>✓ 50+ Qualified Calls/Month</li><li>✓ Full Team</li><li>✓ Landing Pages</li><li>✓ 24/7 Support</li></ul>
+        <a href="https://calendly.com/oluyomboolusegun52/30min" target="_blank" class="btn">Book Free Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Book Your Free Strategy Call</h2>
+    <div class="form-box">
+      <form id="leadForm">
+        <input type="text" id="company" placeholder="Company Name" required>
+        <input type="email" id="email" placeholder="Work Email" required>
+        <textarea id="message" placeholder="Your goals" rows="3"></textarea>
+        <button type="submit" class="btn" style="width:100%;">Book Call</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="about-founder" class="founder-section">
+  <div class="container founder-content">
+    <div class="founder-image">
+      <img src="oluyombo.jpg" alt="Oluyombo Olusegun">
+    </div>
+    <div class="founder-text">
+      <h2>Oluyombo Olusegun</h2>
+      <p><strong>Founder, LeadBridge</strong></p>
+      <p>Oluyombo Olusegun is a B2B Lead Generation and Market Research professional based in Ibadan, Nigeria. He helps businesses find qualified prospects, identify decision‑makers, and build stronger sales pipelines.</p>
+      <p>Through LeadBridge, he works with businesses in Real Estate, Manufacturing, Software, and Digital Services.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 LeadBridge | WhatsApp: +234 812 206 7370 | Email: oluyomboolusegun97@gmail.com</p>
+</footer>
+
+<a href="https://wa.me/2348122067370" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  await fetch('https://formspree.io/f/mbgjrvpr', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      company: company.value,
+      email: email.value,
+      message: message.value
+    })
+  });
+  window.location.href = 'thanks.html';
+});
+</script>
+
+</body>
+</html>
