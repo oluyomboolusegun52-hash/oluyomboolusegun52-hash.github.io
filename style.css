@@ -125,32 +125,15 @@ section {
 .footer-nav a:hover {
   color: #38bdf8;
 }
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* Slide-up animation */
-.slide-up {
+/* Hidden by default */
+.scroll-animate {
   opacity: 0;
   transform: translateY(30px);
-  animation: slideUp 1s ease-out forwards;
+  transition: all 0.8s ease-out;
 }
 
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Visible when scrolled into view */
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-Hi Queen,
-Good afternoon and thank you.
-
-I appreciate the note. Always glad to connect with leaders building in the real estate space.
-
-What are you currently working on at Sabini Homes?
