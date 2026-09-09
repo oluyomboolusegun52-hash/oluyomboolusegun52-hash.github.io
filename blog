@@ -1,0 +1,70 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Growth Insights Blog | LeadBridge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <span class="logo">LeadBridge</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding: 60px 0; text-align: center; background: #030712;">
+  <div class="container">
+    <h1>LeadBridge Insights</h1>
+    <p style="color: var(--text-muted); margin: 12px 0 30px 0;">Outbound mechanics and growth insights for target enterprise platforms.</p>
+    
+    <!-- SYSTEM SEARCH HUB ENGINE -->
+    <input type="text" id="searchBar" placeholder="Search articles by keyword..." onkeyup="runSearchFilter()" style="max-width: 500px; padding: 14px; width: 100%; border-radius: 8px; border: 1px solid #1f2937; background: #111827; color: white; outline: none; font-size: 1rem; text-align: center;">
+  </div>
+</section>
+
+<section style="padding: 60px 0;">
+  <div class="container">
+    <div class="grid" id="articleList">
+      
+      <!-- Card Template 1 -->
+      <article class="card article-item">
+        <span style="color: var(--accent-blue); font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">Lead Generation</span>
+        <h3 style="margin-top: 8px;"><a href="blog-scaling-outbound-nigeria.html" style="color: white; text-decoration: none;">Scaling Outbound B2B Campaigns in Nigeria</a></h3>
+        <p style="color: var(--text-muted); margin-top: 12px;">Discover the exact scripts and filters needed to connect with corporate executives cleanly.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container"><p>© 2026 LeadBridge</p></div>
+</footer>
+
+<script>
+function runSearchFilter() {
+  const query = document.getElementById('searchBar').value.toLowerCase();
+  const items = document.querySelectorAll('.article-item');
+  
+  items.forEach(item => {
+    const bodyText = item.innerText.toLowerCase();
+    if(bodyText.includes(query)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
+</body>
+</html>
