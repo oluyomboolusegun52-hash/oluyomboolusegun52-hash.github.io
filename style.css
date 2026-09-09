@@ -1,176 +1,249 @@
-/* ==========================================================================
-   LeadBridge Pro Additions (Blog, Testimonial, and Layout Enhancements)
-   ========================================================================== */
+/* Premium Luxury Dark Aesthetic */
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: #111827;
+    --bg-input: #1f2937;
+    --accent-blue: #2563eb;
+    --accent-hover: #1d4ed8;
+    --text-primary: #f9fafb;
+    --text-muted: #9ca3af;
+    --whatsapp-green: #25d366;
+}
 
-/* Header Layout Balance */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header & Nav Menu */
+header {
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1f2937;
+    padding: 20px 0;
+}
 .header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+.nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav a:hover, .nav a.active {
+    color: var(--accent-blue);
+}
 
-/* Featured Client Grid Elements */
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 0 80px 0;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* Action Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Featured Trust Banner */
 .clients-section {
-    background-color: #0b0f19;
     padding: 40px 0;
+    background: #030712;
+    border-top: 1px solid #1f2937;
+    border-bottom: 1px solid #1f2937;
     text-align: center;
 }
 .client-logos {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 48px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 .logo-item {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    letter-spacing: 1px;
+    font-weight: 700;
+    color: #4b5563;
 }
 
-/* Testimonial Presentation Layout */
-.testimonials-section {
-    background-color: #0f172a;
+/* Cards & Grid Layouts */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
 }
+.card {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+}
+.card h3 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+}
+
+/* Pricing Layouts */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+.price-card {
+    background-color: var(--bg-card);
+    padding: 48px 32px;
+    border-radius: 16px;
+    border: 1px solid #1f2937;
+    position: relative;
+}
+.price-card.featured {
+    border-color: var(--accent-blue);
+    transform: scale(1.02);
+}
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 24px 0;
+}
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+.price-card ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+.price-card ul li {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+/* Testimonial Section Styles */
 .testimonial-card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--accent-blue);
 }
 .testimonial-text {
     font-style: italic;
-    color: var(--text-main) !important;
-    margin-bottom: 15px;
-}
-.client-info {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-.client-info strong {
-    display: block;
-    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
 }
 
-/* Newsletter Capture Container Styles */
+/* Form Boxes */
+.form-box {
+    max-width: 600px;
+    margin: 48px auto 0 auto;
+    background-color: var(--bg-card);
+    padding: 48px;
+    border-radius: 16px;
+    border: 1px solid #1f2937;
+}
+.form-box input, .form-box textarea, .newsletter-form input {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--bg-input);
+    border: 1px solid #374151;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Newsletter Section Container */
 .newsletter-section {
-    background-color: #1e293b;
-    border-radius: 12px;
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 60px 40px;
+    margin: 80px auto;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 50px 30px;
-    border: 1px solid #334155;
+    text-align: center;
 }
 .newsletter-form {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     max-width: 500px;
-    margin: 25px auto 10px auto;
+    margin: 32px auto 16px auto;
 }
-.newsletter-form input {
-    flex: 1;
-    padding: 12px;
-    background-color: var(--bg-color);
-    border: 1px solid #334155;
-    color: white;
-    border-radius: 6px;
-}
-.status-msg {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    font-weight: bold;
-}
+.newsletter-form input { margin-bottom: 0; }
 
-/* Blog Component Search Styles */
-.blog-dashboard-hero {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #0b0f19;
-}
-.search-wrap {
-    margin: 25px auto;
-    max-width: 500px;
-}
-.search-wrap input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 30px;
-    border: 1px solid #334155;
-    background-color: var(--card-bg);
-    color: white;
-    font-size: 1rem;
-    outline: none;
-    text-align: center;
-}
-.category-pills {
+/* Widgets */
+.whatsapp-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-color: var(--whatsapp-green);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-.pill {
-    background-color: var(--card-bg);
-    border: 1px solid #334155;
-    color: var(--text-muted);
-    padding: 8px 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.pill:hover, .pill.active {
-    background-color: var(--accent);
-    color: white;
-    border-color: var(--accent);
-}
-
-/* Single Blog Page View & Social Boxes */
-.single-post-wrap {
-    max-width: 800px !important;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-.article-body h2 {
-    margin: 30px 0 15px 0;
-    color: white;
-}
-.article-body p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-.share-box {
-    background-color: var(--card-bg);
-    padding: 25px;
-    border-radius: 8px;
-    margin-top: 50px;
-    border: 1px solid #334155;
-}
-.share-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-.share-btn {
-    padding: 10px 20px;
-    border-radius: 6px;
+    font-size: 2rem;
     text-decoration: none;
-    font-weight: bold;
-    color: white;
-    font-size: 0.9rem;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
 }
-.share-btn.li { background-color: #0077b5; }
-.share-btn.tw { background-color: #1da1f2; }
-.share-btn.wa { background-color: #25d366; }
 
-/* Scroll Animating Framework Hooks */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+footer {
+    background-color: #030712;
+    padding: 60px 0;
+    border-top: 1px solid #1f2937;
+    text-align: center;
+    color: var(--text-muted);
 }
-.scroll-animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.footer-nav { margin: 24px 0; }
+.footer-nav a { color: var(--text-muted); text-decoration: none; margin: 0 12px; }
