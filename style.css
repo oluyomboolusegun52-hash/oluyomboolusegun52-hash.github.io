@@ -248,3 +248,23 @@ footer {
 }
 .footer-nav { margin: 24px 0; }
 .footer-nav a { color: var(--text-muted); text-decoration: none; margin: 0 12px; }
+/* Mobile Responsive Navigation Fix */
+@media (max-width: 768px) {
+    .header-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .nav a {
+        margin: 0 !important;
+        font-size: 0.9rem;
+    }
+}
+
